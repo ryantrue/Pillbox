@@ -33,19 +33,19 @@ class ColorTableViewCell: UITableViewCell {
     func cellConfigure(indexPath: IndexPath) {
             switch indexPath.section {
             case 0:
-                backgroundViewCell.backgroundColor = .red
+                backgroundViewCell.backgroundColor = .systemRed
             case 1:
-                backgroundViewCell.backgroundColor = .orange
-            case 2:
-                backgroundViewCell.backgroundColor = .yellow
-            case 3:
-                backgroundViewCell.backgroundColor = .green
-            case 4:
                 backgroundViewCell.backgroundColor = .systemBlue
+            case 2:
+                backgroundViewCell.backgroundColor = .systemTeal
+            case 3:
+                backgroundViewCell.backgroundColor = .systemIndigo
+            case 4:
+                backgroundViewCell.backgroundColor = .systemOrange
             case 5:
-                backgroundViewCell.backgroundColor = .blue
+                backgroundViewCell.backgroundColor = .systemYellow
             default:
-                backgroundViewCell.backgroundColor = .purple
+                backgroundViewCell.backgroundColor = .systemGray
             }
         }
     

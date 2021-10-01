@@ -53,13 +53,13 @@ class ScheduleColorViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
-        case 0: setColor(color: "ec524b")
-        case 1: setColor(color: "3d9fec")
-        case 2: setColor(color: "1caa90")
+        case 0: setColor(color: "E74C3C")
+        case 1: setColor(color: "5DADE2")
+        case 2: setColor(color: "#48C9B0")
         case 3: setColor(color: "576ac1")
-        case 4: setColor(color: "f47040")
-        case 5: setColor(color: "e5ba1d")
-        case 6: setColor(color: "6f848c")
+        case 4: setColor(color: "E67E22")
+        case 5: setColor(color: "F4D03F")
+        case 6: setColor(color: "#85929E")
         default:
             setColor(color: "FFFFFF")
         }
@@ -68,7 +68,7 @@ class ScheduleColorViewController : UITableViewController {
     private func setColor(color: String) {
         let scheduleOptions = self.navigationController?.viewControllers[1] as? ScheduleOptionTableViewController
         scheduleOptions?.hexColorCell = color
-        scheduleOptions?.tableView.reloadRows(at: [[3,0]], with: .none)
+        scheduleOptions?.tableView.reloadRows(at: [[3,0], [4,0]], with: .none)
         self.navigationController?.popViewController(animated: true)
     }
 }

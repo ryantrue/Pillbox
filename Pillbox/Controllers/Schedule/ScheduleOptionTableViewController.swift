@@ -21,7 +21,7 @@ class ScheduleOptionTableViewController : UITableViewController {
     
     private var scheduleModel = ScheduleModel()
     
-    var hexColorCell = "FFFFFF"
+    var hexColorCell = "5DADE2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +43,8 @@ class ScheduleOptionTableViewController : UITableViewController {
         RealmManager.shared.saveSheduleModel(model: scheduleModel)
         scheduleModel = ScheduleModel()
         alertOk(title: "Success")
-        tableView.reloadRows(at: [[0,0],[0,1],[1,0],[1,1],[1,2],[2,0]], with: .none)
-        
+        hexColorCell = "5DADE2"
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,9 +61,7 @@ class ScheduleOptionTableViewController : UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsScheduleCell, for: indexPath) as! OptionsTableViewCell
-        cell.cellScheduleConfigure(nameArray: cellNameArray, indexPath: indexPath)
-        let color = UIColor().colorFromHex(hexColorCell)
-        cell.backgroundViewCell.backgroundColor = (indexPath.section == 3 ? color : .white)
+        cell.cellScheduleConfigure(nameArray: cellNameArray, indexPath: indexPath, hexColor: hexColorCell)
         cell.switchRepeatDelegate = self
         return cell
     }
@@ -94,7 +92,7 @@ class ScheduleOptionTableViewController : UITableViewController {
             }
         case [1,0]:
             alertForCellName(label: cell.nameCellLAbel, name: "name", placholder: "Enter name pill") {text in
-                self.scheduleModel.schedulePillName = text }
+                self.scheduleModel.scheduleName = text }
         case [1,1]:
             alertForCellName(label: cell.nameCellLAbel, name: "Dosage", placholder: "Enter dosage") {text in
                 self.scheduleModel.scheduleDose = text }
@@ -121,7 +119,7 @@ class ScheduleOptionTableViewController : UITableViewController {
 }
 
 extension ScheduleOptionTableViewController: SwitchRepeatProtocol {
-    func switchRepeatTapped(value: Bool) {
+    func switchRepeat(value: Bool) {
         scheduleModel.scheduleRepeat = value
     }
 }

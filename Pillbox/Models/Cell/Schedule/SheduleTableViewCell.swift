@@ -35,6 +35,17 @@ class SheduleTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(model: ScheduleModel) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        pillName.text = model.scheduleName
+        timePill.text = dateFormatter.string(from: model.scheduleTime)
+        countPills.text = model.scheduleDose
+        admissionCondition.text = model.scheduleUnitOfMeasurment
+        backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")
+    }
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
         pillImageView.layer.cornerRadius = pillImageView.frame.height / 2

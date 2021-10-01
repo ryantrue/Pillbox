@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -27,6 +28,9 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         return tableView
     }()
     
+    let localRealm = try! Realm()
+    var scheduleArray: Results<ScheduleModel>!
+    
     let idSheduleCell = "idSheduleCell"
     
     fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
@@ -37,9 +41,10 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
         title = "Shedule"
+        
         calendar.delegate = self
         calendar.dataSource = self
         
@@ -49,6 +54,7 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
         tableView.register(SheduleTableViewCell.self, forCellReuseIdentifier: idSheduleCell)
         setConstraints()
+        scheduleOnDay(date: Date())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtomTapped))
         navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
         
@@ -59,10 +65,9 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         navigationController?.pushViewController(scheduleOption, animated: true)
     }
     
-     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
         if shouldBegin {
-            self.calendar.currentPage = Date()
             let velocity = self.scopeGesture.velocity(in: self.view)
             switch self.calendar.scope {
             case .month:
@@ -75,16 +80,36 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         return shouldBegin
     }
-    
+    private func scheduleOnDay(date: Date) {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
+        guard let weekday = components.weekday else { return}
+        print(weekday)
+        
+        let dateStart = date
+        let dateEnd: Date = {
+            let components = DateComponents(day: 1, second:  -1)
+            return Calendar.current.date(byAdding: components, to: dateStart)!
+        }()
+        
+        let predicateRepeat = NSPredicate(format: "scheduleWeekday = \(weekday) AND scheduleRepeat = true")
+        let predicateUnrepeat = NSPredicate(format: "scheduleRepeat = false AND scheduleDate BETWEEN %@", [dateStart, dateEnd])
+        let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateUnrepeat])
+        
+        scheduleArray = localRealm.objects(ScheduleModel.self).filter(compound).sorted(byKeyPath: "scheduleTime")
+        tableView.reloadData()
+    }
 }
 
 extension SсheduleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return scheduleArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idSheduleCell, for: indexPath) as! SheduleTableViewCell
+        let model = scheduleArray[indexPath.row]
+        cell.configure(model: model)
         return cell
     }
     
@@ -103,7 +128,7 @@ extension SсheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
         view.layoutIfNeeded()
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
+        scheduleOnDay(date: date)
     }
 }
 

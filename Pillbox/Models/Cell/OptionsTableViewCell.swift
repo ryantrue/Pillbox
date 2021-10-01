@@ -47,13 +47,12 @@ class OptionsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func cellScheduleConfigure(nameArray: [[String]], indexPath: IndexPath) {
+    func cellScheduleConfigure(nameArray: [[String]], indexPath: IndexPath, hexColor: String) {
         nameCellLAbel.text = nameArray[indexPath.section][indexPath.row]
         repeatSwitch.isHidden = (indexPath.section == 4 ? false: true)
-        
-        if indexPath == [4,0] {
-            repeatSwitch.isHidden = false
-        }
+        let color = UIColor().colorFromHex(hexColor)
+        backgroundViewCell.backgroundColor = (indexPath.section == 3 ? color : .white)
+        repeatSwitch.onTintColor = color
     }
     
     func cellTasksConfigure(nameArray: [String], indexPath: IndexPath) {
@@ -65,7 +64,7 @@ class OptionsTableViewCell: UITableViewCell {
     }
     
     @objc func switchChange(paramTarget: UISwitch) {
-        switchRepeatDelegate?.switchRepeatTapped(value: paramTarget.isOn)
+        switchRepeatDelegate?.switchRepeat(value: paramTarget.isOn)
     }
     func setConstraints() {
         

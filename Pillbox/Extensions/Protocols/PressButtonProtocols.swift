@@ -12,5 +12,5 @@ protocol PressReadyTaskButtonProtocol: AnyObject {
 }
 
 protocol SwitchRepeatProtocol: AnyObject {
-    func switchRepeatTapped(value: Bool)
+    func switchRepeat(value: Bool)
 }
