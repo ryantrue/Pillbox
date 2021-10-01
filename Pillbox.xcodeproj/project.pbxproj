@@ -19,6 +19,7 @@
 		A324C39627052F7D0021C831 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C39527052F7D0021C831 /* AlertForCellName.swift */; };
 		A324C398270533130021C831 /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C397270533130021C831 /* ScheduleColorViewController.swift */; };
 		A324C39A270533360021C831 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C399270533360021C831 /* TeachersViewController.swift */; };
+		A32D1FA82706E6DD00D185F9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A32D1FA72706E6DD00D185F9 /* SnapKit */; };
 		A33B645E26FD02540074656B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645D26FD02540074656B /* AppDelegate.swift */; };
 		A33B646026FD02540074656B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645F26FD02540074656B /* SceneDelegate.swift */; };
 		A33B646226FD02540074656B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B646126FD02540074656B /* MainTabBarController.swift */; };
@@ -87,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A350CA7027059473009BC719 /* RealmSwift in Frameworks */,
+				A32D1FA82706E6DD00D185F9 /* SnapKit in Frameworks */,
 				A350CA6E27059473009BC719 /* Realm in Frameworks */,
 				A342D01A26FD2FB500BF5B4E /* FSCalendar in Frameworks */,
 			);
@@ -308,6 +310,7 @@
 				A342D01926FD2FB500BF5B4E /* FSCalendar */,
 				A350CA6D27059473009BC719 /* Realm */,
 				A350CA6F27059473009BC719 /* RealmSwift */,
+				A32D1FA72706E6DD00D185F9 /* SnapKit */,
 			);
 			productName = Pillbox;
 			productReference = A33B645A26FD02540074656B /* Pillbox.app */;
@@ -340,6 +343,7 @@
 			packageReferences = (
 				A342D01826FD2FB500BF5B4E /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				A350CA6C27059473009BC719 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				A32D1FA62706E6DD00D185F9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = A33B645B26FD02540074656B /* Products */;
 			projectDirPath = "";
@@ -615,6 +619,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A32D1FA62706E6DD00D185F9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		A342D01826FD2FB500BF5B4E /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -635,6 +647,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A32D1FA72706E6DD00D185F9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A32D1FA62706E6DD00D185F9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		A342D01926FD2FB500BF5B4E /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A342D01826FD2FB500BF5B4E /* XCRemoteSwiftPackageReference "FSCalendar" */;

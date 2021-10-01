@@ -8,6 +8,7 @@
 import UIKit
 import FSCalendar
 import RealmSwift
+import SwiftUI
 
 class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -39,10 +40,13 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         return panGesture
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
         title = "Shedule"
         
         calendar.delegate = self
@@ -56,7 +60,7 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         setConstraints()
         scheduleOnDay(date: Date())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtomTapped))
-//        navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
+        navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
         
     }
     
@@ -80,6 +84,7 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         return shouldBegin
     }
+    
     private func scheduleOnDay(date: Date) {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.weekday], from: date)
@@ -117,14 +122,22 @@ extension SсheduleViewController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
     
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editingRow = scheduleArray[indexPath.row]
+        let deletAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, comletionHendler in
+            RealmManager.shared.deleteSheduleModel(model: editingRow)
+            tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [deletAction])
+    }
 }
+
 //MARK: -FSCalendarDataSource, FSCalendarDelegate
 
 extension SсheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        calendarHeightConstraint.constant = bounds.height
+        calendarHeightConstraint?.constant = bounds.height
         view.layoutIfNeeded()
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {

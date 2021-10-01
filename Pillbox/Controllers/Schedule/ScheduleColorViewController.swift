@@ -53,13 +53,13 @@ class ScheduleColorViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
-        case 0: setColor(color: "E74C3C")
-        case 1: setColor(color: "5DADE2")
-        case 2: setColor(color: "#48C9B0")
-        case 3: setColor(color: "576ac1")
-        case 4: setColor(color: "E67E22")
-        case 5: setColor(color: "F4D03F")
-        case 6: setColor(color: "#85929E")
+        case 0: setColor(color: "EB514B")
+        case 1: setColor(color: "3392E5")
+        case 2: setColor(color: "129A87")
+        case 3: setColor(color: "4E60BB")
+        case 4: setColor(color: "EC6A36")
+        case 5: setColor(color: "ECBD23")
+        case 6: setColor(color: "788C94")
         default:
             setColor(color: "FFFFFF")
         }

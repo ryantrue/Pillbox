@@ -41,7 +41,8 @@ class SheduleTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "HH:mm"
         
         pillName.text = model.scheduleName
-        timePill.text = dateFormatter.string(from: model.scheduleTime)
+        guard let time = model.scheduleTime else {return}
+        timePill.text = dateFormatter.string(from: time)
         countPills.text = model.scheduleDose
         admissionCondition.text = model.scheduleUnitOfMeasurment
         backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")

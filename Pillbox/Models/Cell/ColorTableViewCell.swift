@@ -33,19 +33,19 @@ class ColorTableViewCell: UITableViewCell {
     func cellConfigure(indexPath: IndexPath) {
             switch indexPath.section {
             case 0:
-                backgroundViewCell.backgroundColor = .systemRed
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
             case 1:
-                backgroundViewCell.backgroundColor = .systemBlue
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("3392E5")
             case 2:
-                backgroundViewCell.backgroundColor = .systemTeal
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
             case 3:
-                backgroundViewCell.backgroundColor = .systemIndigo
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("4E60BB")
             case 4:
-                backgroundViewCell.backgroundColor = .systemOrange
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("EC6A36")
             case 5:
-                backgroundViewCell.backgroundColor = .systemYellow
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("ECBD23")
             default:
-                backgroundViewCell.backgroundColor = .systemGray
+                backgroundViewCell.backgroundColor = UIColor().colorFromHex("788C94")
             }
         }
     

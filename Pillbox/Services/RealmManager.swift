@@ -20,4 +20,11 @@ class RealmManager {
             localRealm.add(model)
         }
     }
+    
+    func deleteSheduleModel(model: ScheduleModel) {
+       
+        try! localRealm.write {
+            localRealm.delete(model)
+        }
+    }
 }
