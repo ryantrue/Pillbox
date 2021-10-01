@@ -56,7 +56,7 @@ class SсheduleViewController: UIViewController, UIGestureRecognizerDelegate {
         setConstraints()
         scheduleOnDay(date: Date())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtomTapped))
-        navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
+//        navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
         
     }
     
