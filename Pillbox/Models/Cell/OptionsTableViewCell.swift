@@ -55,12 +55,13 @@ class OptionsTableViewCell: UITableViewCell {
         repeatSwitch.onTintColor = color
     }
     
-    func cellTasksConfigure(nameArray: [String], indexPath: IndexPath) {
+    func cellTasksConfigure(nameArray: [String], indexPath: IndexPath, hexColor: String) {
         nameCellLAbel.text = nameArray[indexPath.section]
         
-        if indexPath == [3,0] {
-            backgroundViewCell.backgroundColor = .systemBlue
-        }
+        let color = UIColor().colorFromHex(hexColor)
+        backgroundViewCell.backgroundColor = (indexPath.section == 3 ? color : .white)
+//        if indexPath == [3,0] {
+//            backgroundViewCell.backgroundColor = .systemBlue
     }
     
     @objc func switchChange(paramTarget: UISwitch) {

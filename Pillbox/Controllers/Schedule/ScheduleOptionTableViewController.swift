@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class ScheduleOptionTableViewController : UITableViewController {
     
     let idOptionsScheduleCell = "idOptionsScheduleCell"
@@ -28,7 +29,6 @@ class ScheduleOptionTableViewController : UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundColor = .lightGray
         tableView.separatorStyle = .none
         tableView.register(OptionsTableViewCell.self, forCellReuseIdentifier: idOptionsScheduleCell)
         tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsScheduleHeader)
@@ -43,7 +43,6 @@ class ScheduleOptionTableViewController : UITableViewController {
         if scheduleModel.scheduleDate == nil || scheduleModel.scheduleTime == nil || scheduleModel.scheduleName == "Unknown" {
             alertOk(title: "Error", message: "Reuered fileds")
         } else {
-            
             scheduleModel.scheduleColor = hexColorCell
             RealmManager.shared.saveSheduleModel(model: scheduleModel)
             scheduleModel = ScheduleModel()
@@ -53,8 +52,14 @@ class ScheduleOptionTableViewController : UITableViewController {
         }
     }
     
+    func pushController(vc: UIViewController) {
+        let viewController = vc
+        navigationController?.navigationBar.topItem?.title = "Options"
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+      5
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -81,7 +86,7 @@ class ScheduleOptionTableViewController : UITableViewController {
         return header
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 36
+    30
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -116,11 +121,6 @@ class ScheduleOptionTableViewController : UITableViewController {
         default:
             print("Tap OptionTableView")
         }
-    }
-    func pushController(vc: UIViewController) {
-        let viewController = vc
-        navigationController?.navigationBar.topItem?.title = "Options"
-        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

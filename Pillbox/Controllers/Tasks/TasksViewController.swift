@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -28,6 +29,15 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
     }()
     
     let idTasksCell = "idTasksCell"
+    
+    private let localRealm = try! Realm()
+    private var tasksArray: Results<TaskModel>!
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     let showHideButton : UIButton = {
         let button = UIButton()
@@ -57,31 +67,44 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.addGestureRecognizer(self.scopeGesture)
         self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
         setConstraints()
+        setTaskOnDay(date: calendar.today!)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtomTapped))
     }
     
     @objc func addButtomTapped() {
-        let tasksOption = TaskOptionTabbleView()
+        let tasksOption = TaskOptionTabbleViewController()
         navigationController?.pushViewController(tasksOption, animated: true)
     }
     
     @objc func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-       let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
-       if shouldBegin {
-           self.calendar.currentPage = Date()
-           let velocity = self.scopeGesture.velocity(in: self.view)
-           switch self.calendar.scope {
-           case .month:
-               return velocity.y < 0
-           case .week:
-               return velocity.y > 0
-           @unknown default:
-               fatalError()
-           }
-       }
-       return shouldBegin
-   }
+        let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
+        if shouldBegin {
+            self.calendar.currentPage = Date()
+            let velocity = self.scopeGesture.velocity(in: self.view)
+            switch self.calendar.scope {
+            case .month:
+                return velocity.y < 0
+            case .week:
+                return velocity.y > 0
+            @unknown default:
+                fatalError()
+            }
+        }
+        return shouldBegin
+    }
+    
+    
+    private func setTaskOnDay(date: Date) {
+        let dateStart = date
+        let dateEnd: Date = {
+            let components = DateComponents(day: 1, second: -1)
+            return Calendar.current.date(byAdding: components, to: dateStart)!
+        }()
+        
+        tasksArray = localRealm.objects(TaskModel.self).filter("taskDate BETWEEN %@", [dateStart, dateEnd])
+        tableView.reloadData()
+    }
     
     
     @objc func showHideButtonTapped() {
@@ -96,25 +119,39 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
 
 extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        tasksArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idTasksCell, for: indexPath) as! TaskTableViewCell
         cell.cellTaskDelegate = self
         cell.index = indexPath
+        let model = tasksArray[indexPath.row]
+        cell.configure(model: model)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editingRow = tasksArray[indexPath.row]
+        let deletAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, comletionHendler in
+            RealmManager.shared.deleteTaskModel(model: editingRow)
+            tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [deletAction])
+    }
 }
 
 //MARK: - PressReadyTaskButtonProtocol
 extension TasksViewController: PressReadyTaskButtonProtocol{
     func readyButtonTapped(indexPath: IndexPath) {
-
+        
+        let task = tasksArray[indexPath.row]
+        RealmManager.shared.updateReadyButtonTaskModel(task: task, bool: !task.taskReady)
+        tableView.reloadData()
     }
 }
 //MARK: - FSCalendarDataSource, FSCalendarDelegate
@@ -126,7 +163,7 @@ extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
         view.layoutIfNeeded()
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
+        setTaskOnDay(date: date)
     }
 }
 

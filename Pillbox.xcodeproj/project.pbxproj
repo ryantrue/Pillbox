@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A316EAD92705853500B3EAB1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EAD82705853500B3EAB1 /* SettingsTableViewController.swift */; };
 		A316EADB2705858000B3EAB1 /* SettingsViewControoler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EADA2705858000B3EAB1 /* SettingsViewControoler.swift */; };
-		A316EAE02705875300B3EAB1 /* TaskOptionTabbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EADE2705875300B3EAB1 /* TaskOptionTabbleView.swift */; };
+		A316EAE02705875300B3EAB1 /* TaskOptionTabbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EADE2705875300B3EAB1 /* TaskOptionTabbleViewController.swift */; };
 		A316EAE12705875300B3EAB1 /* ColorTaskTableiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EADF2705875300B3EAB1 /* ColorTaskTableiewController.swift */; };
 		A316EAE62705892700B3EAB1 /* HeaderOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EAE52705892700B3EAB1 /* HeaderOptionTableViewCell.swift */; };
 		A316EAE82705894A00B3EAB1 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EAE72705894A00B3EAB1 /* OptionsTableViewCell.swift */; };
@@ -20,6 +20,7 @@
 		A324C398270533130021C831 /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C397270533130021C831 /* ScheduleColorViewController.swift */; };
 		A324C39A270533360021C831 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C399270533360021C831 /* TeachersViewController.swift */; };
 		A32D1FA82706E6DD00D185F9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A32D1FA72706E6DD00D185F9 /* SnapKit */; };
+		A32D1FAA2707C07400D185F9 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D1FA92707C07400D185F9 /* TaskModel.swift */; };
 		A33B645E26FD02540074656B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645D26FD02540074656B /* AppDelegate.swift */; };
 		A33B646026FD02540074656B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645F26FD02540074656B /* SceneDelegate.swift */; };
 		A33B646226FD02540074656B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B646126FD02540074656B /* MainTabBarController.swift */; };
@@ -47,7 +48,7 @@
 /* Begin PBXFileReference section */
 		A316EAD82705853500B3EAB1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		A316EADA2705858000B3EAB1 /* SettingsViewControoler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewControoler.swift; sourceTree = "<group>"; };
-		A316EADE2705875300B3EAB1 /* TaskOptionTabbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskOptionTabbleView.swift; sourceTree = "<group>"; };
+		A316EADE2705875300B3EAB1 /* TaskOptionTabbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskOptionTabbleViewController.swift; sourceTree = "<group>"; };
 		A316EADF2705875300B3EAB1 /* ColorTaskTableiewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTaskTableiewController.swift; sourceTree = "<group>"; };
 		A316EAE52705892700B3EAB1 /* HeaderOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionTableViewCell.swift; sourceTree = "<group>"; };
 		A316EAE72705894A00B3EAB1 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		A324C397270533130021C831 /* ScheduleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorViewController.swift; sourceTree = "<group>"; };
 		A324C399270533360021C831 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		A32D1FA52706E29200D185F9 /* Pillbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pillbox.entitlements; sourceTree = "<group>"; };
+		A32D1FA92707C07400D185F9 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		A33B645A26FD02540074656B /* Pillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B645D26FD02540074656B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33B645F26FD02540074656B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				A350CA7327059500009BC719 /* SheduleModel.swift */,
+				A32D1FA92707C07400D185F9 /* TaskModel.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -238,9 +241,9 @@
 		A3ADA966270426AA005D1201 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				A316EADF2705875300B3EAB1 /* ColorTaskTableiewController.swift */,
-				A316EADE2705875300B3EAB1 /* TaskOptionTabbleView.swift */,
 				A33B647626FD08E60074656B /* TasksViewController.swift */,
+				A316EADE2705875300B3EAB1 /* TaskOptionTabbleViewController.swift */,
+				A316EADF2705875300B3EAB1 /* ColorTaskTableiewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -379,10 +382,11 @@
 				A391E81A2703D1550046B740 /* SheduleTableViewCell.swift in Sources */,
 				A316EAEA2705897400B3EAB1 /* ColorTableViewCell.swift in Sources */,
 				A324C39A270533360021C831 /* TeachersViewController.swift in Sources */,
-				A316EAE02705875300B3EAB1 /* TaskOptionTabbleView.swift in Sources */,
+				A316EAE02705875300B3EAB1 /* TaskOptionTabbleViewController.swift in Sources */,
 				A324C39627052F7D0021C831 /* AlertForCellName.swift in Sources */,
 				A391E81C2703E19E0046B740 /* UILabel.swift in Sources */,
 				A342D02326FD721200BF5B4E /* UIStackView.swift in Sources */,
+				A32D1FAA2707C07400D185F9 /* TaskModel.swift in Sources */,
 				A324C39427052D610021C831 /* AlertTime.swift in Sources */,
 				A33B646026FD02540074656B /* SceneDelegate.swift in Sources */,
 				A316EADB2705858000B3EAB1 /* SettingsViewControoler.swift in Sources */,
@@ -468,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -524,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

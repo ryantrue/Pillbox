@@ -19,7 +19,6 @@ class ScheduleColorViewController : UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundColor = .gray
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.register(ColorTableViewCell.self, forCellReuseIdentifier: idOptionsColorCell)
@@ -27,11 +26,19 @@ class ScheduleColorViewController : UITableViewController {
         
         title = "Color shcedule"
     }
+    
+    private func setColor(color: String) {
+        let scheduleOptions = self.navigationController?.viewControllers[1] as? ScheduleOptionTableViewController
+        scheduleOptions?.hexColorCell = color
+        scheduleOptions?.tableView.reloadRows(at: [[3,0], [4,0]], with: .none)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 7
+        7
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsColorCell, for: indexPath) as! ColorTableViewCell
@@ -39,7 +46,7 @@ class ScheduleColorViewController : UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        44
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -48,7 +55,7 @@ class ScheduleColorViewController : UITableViewController {
         return header
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        30
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -63,12 +70,5 @@ class ScheduleColorViewController : UITableViewController {
         default:
             setColor(color: "FFFFFF")
         }
-    }
-    
-    private func setColor(color: String) {
-        let scheduleOptions = self.navigationController?.viewControllers[1] as? ScheduleOptionTableViewController
-        scheduleOptions?.hexColorCell = color
-        scheduleOptions?.tableView.reloadRows(at: [[3,0], [4,0]], with: .none)
-        self.navigationController?.popViewController(animated: true)
     }
 }
