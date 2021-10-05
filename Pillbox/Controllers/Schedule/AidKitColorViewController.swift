@@ -6,10 +6,11 @@
 //
 
 import UIKit
-class ScheduleColorViewController : UITableViewController {
+
+final class AidKitColorViewController : UITableViewController {
     
-    let idOptionsColorCell = "idOptionsScheduleCell"
-    let idOptionsScheduleHeader = "idOptionsScheduleHeader"
+    let idOptionsColorCell = "idOptionsAidKitCell"
+    let idOptionsAidKitHeader = "idOptionsAidKitHeader"
     
     let headerNameArray = ["RED","BLUE","TEAL","INDIGO","ORANGE", "YELLOW", "GRAY"]
     
@@ -22,15 +23,15 @@ class ScheduleColorViewController : UITableViewController {
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.register(ColorTableViewCell.self, forCellReuseIdentifier: idOptionsColorCell)
-        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsScheduleHeader)
+        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsAidKitHeader)
         
         title = "Color shcedule"
     }
     
     private func setColor(color: String) {
-        let scheduleOptions = self.navigationController?.viewControllers[1] as? ScheduleOptionTableViewController
-        scheduleOptions?.hexColorCell = color
-        scheduleOptions?.tableView.reloadRows(at: [[3,0], [4,0]], with: .none)
+        let aidKitOptions = self.navigationController?.viewControllers[1] as? AidKitOptionTableViewController
+        aidKitOptions?.hexColorCell = color
+        aidKitOptions?.tableView.reloadRows(at: [[3,0], [4,0]], with: .none)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -50,7 +51,7 @@ class ScheduleColorViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsScheduleHeader) as! HeaderOptionTableViewCell
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsAidKitHeader) as! HeaderOptionTableViewCell
         header.headerConfigure(nameArray: headerNameArray, section: section)
         return header
     }
@@ -60,7 +61,7 @@ class ScheduleColorViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
-        case 0: setColor(color: "EB514B")
+        case 0: setColor(color: "ED534D")
         case 1: setColor(color: "3392E5")
         case 2: setColor(color: "129A87")
         case 3: setColor(color: "4E60BB")

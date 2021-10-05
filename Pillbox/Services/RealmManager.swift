@@ -7,20 +7,20 @@
 
 import RealmSwift
 
-class RealmManager {
+final class RealmManager {
     static let shared = RealmManager()
     
     private init() {}
     
     let localRealm = try! Realm()
     
-    func saveSheduleModel(model: ScheduleModel) {
+    func saveAidKitModel(model: AidKitModel) {
         try! localRealm.write {
             localRealm.add(model)
         }
     }
     
-    func deleteSheduleModel(model: ScheduleModel) {
+    func deleteAidKitModel(model: AidKitModel) {
         try! localRealm.write {
             localRealm.delete(model)
         }

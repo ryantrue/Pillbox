@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskOptionTabbleViewController : UITableViewController {
+final class TaskOptionTabbleViewController : UITableViewController {
     
     let idOptionsTasksCell = "idOptionsTasksCell"
     let idOptionsTasksHeader = "idOptionsTasksHeader"

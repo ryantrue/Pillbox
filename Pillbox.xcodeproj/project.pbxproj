@@ -17,33 +17,60 @@
 		A324C392270500490021C831 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C391270500490021C831 /* AlertDate.swift */; };
 		A324C39427052D610021C831 /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C39327052D610021C831 /* AlertTime.swift */; };
 		A324C39627052F7D0021C831 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C39527052F7D0021C831 /* AlertForCellName.swift */; };
-		A324C398270533130021C831 /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C397270533130021C831 /* ScheduleColorViewController.swift */; };
-		A324C39A270533360021C831 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C399270533360021C831 /* TeachersViewController.swift */; };
+		A324C398270533130021C831 /* AidKitColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324C397270533130021C831 /* AidKitColorViewController.swift */; };
 		A32D1FA82706E6DD00D185F9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A32D1FA72706E6DD00D185F9 /* SnapKit */; };
 		A32D1FAA2707C07400D185F9 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D1FA92707C07400D185F9 /* TaskModel.swift */; };
+		A32D1FAC27080B2F00D185F9 /* UICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D1FAB27080B2F00D185F9 /* UICell.swift */; };
 		A33B645E26FD02540074656B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645D26FD02540074656B /* AppDelegate.swift */; };
 		A33B646026FD02540074656B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B645F26FD02540074656B /* SceneDelegate.swift */; };
 		A33B646226FD02540074656B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B646126FD02540074656B /* MainTabBarController.swift */; };
 		A33B646726FD02560074656B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33B646626FD02560074656B /* Assets.xcassets */; };
 		A33B646A26FD02560074656B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B646826FD02560074656B /* LaunchScreen.storyboard */; };
-		A33B647526FD08CC0074656B /* SсheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647426FD08CC0074656B /* SсheduleViewController.swift */; };
-		A33B647726FD08E70074656B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647626FD08E60074656B /* TasksViewController.swift */; };
+		A33B647526FD08CC0074656B /* AidKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647426FD08CC0074656B /* AidKitViewController.swift */; };
+		A33B647726FD08E70074656B /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647626FD08E60074656B /* JournalViewController.swift */; };
 		A342D01A26FD2FB500BF5B4E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A342D01926FD2FB500BF5B4E /* FSCalendar */; };
 		A342D02326FD721200BF5B4E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A342D02226FD721200BF5B4E /* UIStackView.swift */; };
 		A343DE5127058A6500DCD869 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343DE5027058A6500DCD869 /* SettingsTableViewCell.swift */; };
 		A350CA6E27059473009BC719 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A350CA6D27059473009BC719 /* Realm */; };
 		A350CA7027059473009BC719 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A350CA6F27059473009BC719 /* RealmSwift */; };
-		A350CA7427059500009BC719 /* SheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A350CA7327059500009BC719 /* SheduleModel.swift */; };
+		A350CA7427059500009BC719 /* AidKitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A350CA7327059500009BC719 /* AidKitModel.swift */; };
 		A350CA77270599DA009BC719 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A350CA76270599DA009BC719 /* RealmManager.swift */; };
 		A350CA792705AB92009BC719 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A350CA782705AB92009BC719 /* UIColor.swift */; };
 		A350CA7B2705B342009BC719 /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A350CA7A2705B342009BC719 /* AlertOk.swift */; };
 		A35EA61227040AF1003B2536 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EA61127040AF1003B2536 /* TaskTableViewCell.swift */; };
 		A35EA615270414D8003B2536 /* PressButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EA614270414D8003B2536 /* PressButtonProtocols.swift */; };
-		A391E81A2703D1550046B740 /* SheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A391E8192703D1550046B740 /* SheduleTableViewCell.swift */; };
+		A391E81A2703D1550046B740 /* AidKitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A391E8192703D1550046B740 /* AidKitTableViewCell.swift */; };
 		A391E81C2703E19E0046B740 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A391E81B2703E19E0046B740 /* UILabel.swift */; };
 		A391E81E2703E96B0046B740 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A391E81D2703E96B0046B740 /* UIFont.swift */; };
-		A3ADA96427042663005D1201 /* ScheduleOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADA96327042663005D1201 /* ScheduleOptionTableViewController.swift */; };
+		A39E4BCA270AA64E007E166F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E4BC9270AA64E007E166F /* NotificationService.swift */; };
+		A39E4BCE270AA64E007E166F /* ServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A39E4BC7270AA64E007E166F /* ServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A39E4BD5270BDD6B007E166F /* UICalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E4BD4270BDD6B007E166F /* UICalendar.swift */; };
+		A3ADA96427042663005D1201 /* AidKitOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADA96327042663005D1201 /* AidKitOptionTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A39E4BCC270AA64E007E166F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33B645226FD02540074656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A39E4BC6270AA64E007E166F;
+			remoteInfo = ServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A39E4BC2270AA615007E166F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A39E4BCE270AA64E007E166F /* ServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A316EAD82705853500B3EAB1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +83,10 @@
 		A324C391270500490021C831 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		A324C39327052D610021C831 /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
 		A324C39527052F7D0021C831 /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
-		A324C397270533130021C831 /* ScheduleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorViewController.swift; sourceTree = "<group>"; };
-		A324C399270533360021C831 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		A324C397270533130021C831 /* AidKitColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitColorViewController.swift; sourceTree = "<group>"; };
 		A32D1FA52706E29200D185F9 /* Pillbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pillbox.entitlements; sourceTree = "<group>"; };
 		A32D1FA92707C07400D185F9 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		A32D1FAB27080B2F00D185F9 /* UICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICell.swift; sourceTree = "<group>"; };
 		A33B645A26FD02540074656B /* Pillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B645D26FD02540074656B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33B645F26FD02540074656B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,21 +94,31 @@
 		A33B646626FD02560074656B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A33B646926FD02560074656B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A33B646B26FD02560074656B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A33B647426FD08CC0074656B /* SсheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SсheduleViewController.swift"; sourceTree = "<group>"; };
-		A33B647626FD08E60074656B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		A33B647426FD08CC0074656B /* AidKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitViewController.swift; sourceTree = "<group>"; };
+		A33B647626FD08E60074656B /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		A342D02226FD721200BF5B4E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		A343DE5027058A6500DCD869 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		A350CA7327059500009BC719 /* SheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleModel.swift; sourceTree = "<group>"; };
+		A350CA7327059500009BC719 /* AidKitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitModel.swift; sourceTree = "<group>"; };
 		A350CA76270599DA009BC719 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		A350CA782705AB92009BC719 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A350CA7A2705B342009BC719 /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
 		A35EA6102703FDE1003B2536 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		A35EA61127040AF1003B2536 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A35EA614270414D8003B2536 /* PressButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocols.swift; sourceTree = "<group>"; };
-		A391E8192703D1550046B740 /* SheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleTableViewCell.swift; sourceTree = "<group>"; };
+		A391E8192703D1550046B740 /* AidKitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitTableViewCell.swift; sourceTree = "<group>"; };
 		A391E81B2703E19E0046B740 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		A391E81D2703E96B0046B740 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		A3ADA96327042663005D1201 /* ScheduleOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOptionTableViewController.swift; sourceTree = "<group>"; };
+		A39E4BB0270AA615007E166F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		A39E4BB2270AA615007E166F /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		A39E4BB5270AA615007E166F /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		A39E4BB8270AA615007E166F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A39E4BBA270AA615007E166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A39E4BBE270AA615007E166F /* ServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiceExtension.entitlements; sourceTree = "<group>"; };
+		A39E4BC7270AA64E007E166F /* ServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39E4BC9270AA64E007E166F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A39E4BCB270AA64E007E166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A39E4BD4270BDD6B007E166F /* UICalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendar.swift; sourceTree = "<group>"; };
+		A3ADA96327042663005D1201 /* AidKitOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitOptionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +133,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A39E4BC4270AA64E007E166F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,6 +148,9 @@
 			children = (
 				A35EA6102703FDE1003B2536 /* .gitignore.md */,
 				A33B645C26FD02540074656B /* Pillbox */,
+				A39E4BB4270AA615007E166F /* ServiceExtension */,
+				A39E4BC8270AA64E007E166F /* ServiceExtension */,
+				A39E4BAF270AA615007E166F /* Frameworks */,
 				A33B645B26FD02540074656B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A33B645A26FD02540074656B /* Pillbox.app */,
+				A39E4BC7270AA64E007E166F /* ServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +247,8 @@
 				A391E81B2703E19E0046B740 /* UILabel.swift */,
 				A391E81D2703E96B0046B740 /* UIFont.swift */,
 				A350CA782705AB92009BC719 /* UIColor.swift */,
+				A32D1FAB27080B2F00D185F9 /* UICell.swift */,
+				A39E4BD4270BDD6B007E166F /* UICalendar.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -206,7 +256,7 @@
 		A350CA71270594E5009BC719 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				A350CA7327059500009BC719 /* SheduleModel.swift */,
+				A350CA7327059500009BC719 /* AidKitModel.swift */,
 				A32D1FA92707C07400D185F9 /* TaskModel.swift */,
 			);
 			path = Realm;
@@ -228,12 +278,41 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		A39E4BAF270AA615007E166F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A39E4BB0270AA615007E166F /* UserNotifications.framework */,
+				A39E4BB2270AA615007E166F /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A39E4BB4270AA615007E166F /* ServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A39E4BBE270AA615007E166F /* ServiceExtension.entitlements */,
+				A39E4BB5270AA615007E166F /* NotificationViewController.swift */,
+				A39E4BB7270AA615007E166F /* MainInterface.storyboard */,
+				A39E4BBA270AA615007E166F /* Info.plist */,
+			);
+			path = ServiceExtension;
+			sourceTree = "<group>";
+		};
+		A39E4BC8270AA64E007E166F /* ServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A39E4BC9270AA64E007E166F /* NotificationService.swift */,
+				A39E4BCB270AA64E007E166F /* Info.plist */,
+			);
+			path = ServiceExtension;
+			sourceTree = "<group>";
+		};
 		A3ADA9652704267E005D1201 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				A33B647426FD08CC0074656B /* SсheduleViewController.swift */,
-				A3ADA96327042663005D1201 /* ScheduleOptionTableViewController.swift */,
-				A324C397270533130021C831 /* ScheduleColorViewController.swift */,
+				A33B647426FD08CC0074656B /* AidKitViewController.swift */,
+				A3ADA96327042663005D1201 /* AidKitOptionTableViewController.swift */,
+				A324C397270533130021C831 /* AidKitColorViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -241,7 +320,7 @@
 		A3ADA966270426AA005D1201 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				A33B647626FD08E60074656B /* TasksViewController.swift */,
+				A33B647626FD08E60074656B /* JournalViewController.swift */,
 				A316EADE2705875300B3EAB1 /* TaskOptionTabbleViewController.swift */,
 				A316EADF2705875300B3EAB1 /* ColorTaskTableiewController.swift */,
 			);
@@ -253,7 +332,6 @@
 			children = (
 				A316EADA2705858000B3EAB1 /* SettingsViewControoler.swift */,
 				A316EAD82705853500B3EAB1 /* SettingsTableViewController.swift */,
-				A324C399270533360021C831 /* TeachersViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -261,7 +339,7 @@
 		A3ADA96827042D52005D1201 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				A391E8192703D1550046B740 /* SheduleTableViewCell.swift */,
+				A391E8192703D1550046B740 /* AidKitTableViewCell.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -303,10 +381,12 @@
 				A33B645626FD02540074656B /* Sources */,
 				A33B645726FD02540074656B /* Frameworks */,
 				A33B645826FD02540074656B /* Resources */,
+				A39E4BC2270AA615007E166F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A39E4BCD270AA64E007E166F /* PBXTargetDependency */,
 			);
 			name = Pillbox;
 			packageProductDependencies = (
@@ -319,6 +399,23 @@
 			productReference = A33B645A26FD02540074656B /* Pillbox.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A39E4BC6270AA64E007E166F /* ServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39E4BCF270AA64E007E166F /* Build configuration list for PBXNativeTarget "ServiceExtension" */;
+			buildPhases = (
+				A39E4BC3270AA64E007E166F /* Sources */,
+				A39E4BC4270AA64E007E166F /* Frameworks */,
+				A39E4BC5270AA64E007E166F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceExtension;
+			productName = ServiceExtension;
+			productReference = A39E4BC7270AA64E007E166F /* ServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,6 +427,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					A33B645926FD02540074656B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A39E4BC6270AA64E007E166F = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -353,6 +453,7 @@
 			projectRoot = "";
 			targets = (
 				A33B645926FD02540074656B /* Pillbox */,
+				A39E4BC6270AA64E007E166F /* ServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -364,6 +465,13 @@
 			files = (
 				A33B646A26FD02560074656B /* LaunchScreen.storyboard in Resources */,
 				A33B646726FD02560074656B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39E4BC5270AA64E007E166F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +487,9 @@
 				A33B646226FD02540074656B /* MainTabBarController.swift in Sources */,
 				A33B645E26FD02540074656B /* AppDelegate.swift in Sources */,
 				A35EA61227040AF1003B2536 /* TaskTableViewCell.swift in Sources */,
-				A391E81A2703D1550046B740 /* SheduleTableViewCell.swift in Sources */,
+				A391E81A2703D1550046B740 /* AidKitTableViewCell.swift in Sources */,
+				A39E4BD5270BDD6B007E166F /* UICalendar.swift in Sources */,
 				A316EAEA2705897400B3EAB1 /* ColorTableViewCell.swift in Sources */,
-				A324C39A270533360021C831 /* TeachersViewController.swift in Sources */,
 				A316EAE02705875300B3EAB1 /* TaskOptionTabbleViewController.swift in Sources */,
 				A324C39627052F7D0021C831 /* AlertForCellName.swift in Sources */,
 				A391E81C2703E19E0046B740 /* UILabel.swift in Sources */,
@@ -392,22 +500,39 @@
 				A316EADB2705858000B3EAB1 /* SettingsViewControoler.swift in Sources */,
 				A350CA77270599DA009BC719 /* RealmManager.swift in Sources */,
 				A350CA7B2705B342009BC719 /* AlertOk.swift in Sources */,
-				A33B647726FD08E70074656B /* TasksViewController.swift in Sources */,
+				A33B647726FD08E70074656B /* JournalViewController.swift in Sources */,
 				A391E81E2703E96B0046B740 /* UIFont.swift in Sources */,
-				A350CA7427059500009BC719 /* SheduleModel.swift in Sources */,
-				A33B647526FD08CC0074656B /* SсheduleViewController.swift in Sources */,
+				A350CA7427059500009BC719 /* AidKitModel.swift in Sources */,
+				A33B647526FD08CC0074656B /* AidKitViewController.swift in Sources */,
 				A343DE5127058A6500DCD869 /* SettingsTableViewCell.swift in Sources */,
+				A32D1FAC27080B2F00D185F9 /* UICell.swift in Sources */,
 				A316EAE12705875300B3EAB1 /* ColorTaskTableiewController.swift in Sources */,
 				A35EA615270414D8003B2536 /* PressButtonProtocols.swift in Sources */,
 				A316EAE82705894A00B3EAB1 /* OptionsTableViewCell.swift in Sources */,
-				A324C398270533130021C831 /* ScheduleColorViewController.swift in Sources */,
-				A3ADA96427042663005D1201 /* ScheduleOptionTableViewController.swift in Sources */,
+				A324C398270533130021C831 /* AidKitColorViewController.swift in Sources */,
+				A3ADA96427042663005D1201 /* AidKitOptionTableViewController.swift in Sources */,
 				A316EAD92705853500B3EAB1 /* SettingsTableViewController.swift in Sources */,
 				A316EAE62705892700B3EAB1 /* HeaderOptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A39E4BC3270AA64E007E166F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39E4BCA270AA64E007E166F /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A39E4BCD270AA64E007E166F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A39E4BC6270AA64E007E166F /* ServiceExtension */;
+			targetProxy = A39E4BCC270AA64E007E166F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A33B646826FD02560074656B /* LaunchScreen.storyboard */ = {
@@ -416,6 +541,14 @@
 				A33B646926FD02560074656B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A39E4BB7270AA615007E166F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A39E4BB8270AA615007E166F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -472,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -528,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -542,16 +675,18 @@
 		A33B646F26FD02560074656B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pillbox/Resources/Pillbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6S7VJYCU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pillbox/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -559,7 +694,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.2;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RayenD.Pillbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -572,16 +707,18 @@
 		A33B647026FD02560074656B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pillbox/Resources/Pillbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6S7VJYCU8F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pillbox/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -589,9 +726,65 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.2;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RayenD.Pillbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A39E4BD0270AA64E007E166F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ServiceExtension/ServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6S7VJYCU8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RayenD.Pillbox.ServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A39E4BD1270AA64E007E166F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ServiceExtension/ServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6S7VJYCU8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RayenD.Pillbox.ServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -616,6 +809,15 @@
 			buildConfigurations = (
 				A33B646F26FD02560074656B /* Debug */,
 				A33B647026FD02560074656B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39E4BCF270AA64E007E166F /* Build configuration list for PBXNativeTarget "ServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39E4BD0270AA64E007E166F /* Debug */,
+				A39E4BD1270AA64E007E166F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

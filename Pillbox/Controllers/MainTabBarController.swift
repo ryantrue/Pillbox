@@ -8,7 +8,7 @@
 import UIKit
 
 
-class MainTabBarController: UITabBarController {
+final class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,11 +16,11 @@ class MainTabBarController: UITabBarController {
     }
     
     func setupTabBar() {
-        let sheduleViewController = createNavController(vc: SсheduleViewController(), itemName: "Schedule", itemImage: "calendar.badge.clock")
-        let tasksViewControoler = createNavController(vc: TasksViewController(), itemName: "Tasks", itemImage: "hourglass.badge.plus")
+        let AidKitViewController = createNavController(vc: AidKitViewController(), itemName: "AidKit", itemImage: "calendar.badge.clock")
+        let tasksViewControoler = createNavController(vc: JournalViewController(), itemName: "Tasks", itemImage: "hourglass.badge.plus")
         let settingsViewControoler = createNavController(vc: SettingsTableViewController(), itemName: "Settings", itemImage: "gearshape")
         
-        viewControllers = [sheduleViewController, tasksViewControoler, settingsViewControoler]
+        viewControllers = [AidKitViewController, tasksViewControoler, settingsViewControoler]
     }
     
     func createNavController(vc: UIViewController, itemName: String, itemImage: String) -> UINavigationController {

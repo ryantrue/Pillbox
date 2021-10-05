@@ -7,11 +7,13 @@
 
 import UIKit
 
-class OptionsTableViewCell: UITableViewCell {
+
+final class OptionsTableViewCell: UITableViewCell {
     
     let backgroundViewCell: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 10
+        view.makeShadow()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -35,10 +37,11 @@ class OptionsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setConstraints()
+//        setConstraints()
+        updateViewConstraints()
         
         self.selectionStyle = .none
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .white
         
         repeatSwitch.addTarget(self, action: #selector(switchChange(paramTarget:)), for: .valueChanged)
     }
@@ -47,7 +50,7 @@ class OptionsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func cellScheduleConfigure(nameArray: [[String]], indexPath: IndexPath, hexColor: String) {
+    func cellAidKitConfigure(nameArray: [[String]], indexPath: IndexPath, hexColor: String) {
         nameCellLAbel.text = nameArray[indexPath.section][indexPath.row]
         repeatSwitch.isHidden = (indexPath.section == 4 ? false: true)
         let color = UIColor().colorFromHex(hexColor)
@@ -67,25 +70,22 @@ class OptionsTableViewCell: UITableViewCell {
     @objc func switchChange(paramTarget: UISwitch) {
         switchRepeatDelegate?.switchRepeat(value: paramTarget.isOn)
     }
-    func setConstraints() {
-        
-        self.addSubview(backgroundViewCell)
-        NSLayoutConstraint.activate([
-            backgroundViewCell.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            backgroundViewCell.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:  5),
-            backgroundViewCell.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-            backgroundViewCell.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -1)
-        ])
-        self.addSubview(nameCellLAbel)
-        NSLayoutConstraint.activate([
-            nameCellLAbel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            nameCellLAbel.leadingAnchor.constraint(equalTo: backgroundViewCell.leadingAnchor, constant:  5)
-        ])
-        self.contentView.addSubview(repeatSwitch)
-        NSLayoutConstraint.activate([
-            repeatSwitch.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            repeatSwitch.trailingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant:  -15)
-        ])
-        
+    
+    func updateViewConstraints() {
+        contentView.addSubview(backgroundViewCell)
+        backgroundViewCell.snp.makeConstraints { (make) -> Void in
+            make.edges.equalTo(contentView).inset(UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5))
+        }
+        contentView.addSubview(nameCellLAbel)
+        nameCellLAbel.snp.makeConstraints { (make) -> Void in
+            make.centerY.equalToSuperview()
+            make.left.equalTo(backgroundViewCell).inset(5)
     }
+        contentView.addSubview(repeatSwitch)
+        repeatSwitch.snp.makeConstraints { (make) -> Void in
+            make.centerY.equalToSuperview()
+            make.right.equalTo(backgroundViewCell).inset(15)
+        }
+    }
+    
 }

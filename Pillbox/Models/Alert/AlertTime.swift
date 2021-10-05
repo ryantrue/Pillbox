@@ -22,8 +22,8 @@ extension UIViewController {
           let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "HH:mm"
             let timeString = dateFormatter.string(from: datePicker.date)
-            let timeShedule = datePicker.date 
-            completioHendler(timeShedule)
+            let timeAidKit = datePicker.date 
+            completioHendler(timeAidKit)
             
             label.text = timeString
         }

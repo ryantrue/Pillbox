@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class SheduleTableViewCell: UITableViewCell {
+final class AidKitTableViewCell: UITableViewCell {
     
     let pillImageView: UIImageView = {
         let pillImageView = UIImageView()
@@ -35,17 +36,17 @@ class SheduleTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(model: ScheduleModel) {
+    func configure(model: AidKitModel) {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         
-        pillName.text = model.scheduleName
-        guard let time = model.scheduleTime else {return}
+        pillName.text = model.aidKitName
+        guard let time = model.aidKitTime else {return}
         timePill.text = dateFormatter.string(from: time)
-        countPills.text = model.scheduleDose
-        admissionCondition.text = model.scheduleUnitOfMeasurment
-        backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")
+        countPills.text = model.aidKitDose
+        admissionCondition.text = model.aidKitUnitOfMeasurment
+        backgroundColor = UIColor().colorFromHex("\(model.aidKitColor)")
     }
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
@@ -53,9 +54,9 @@ class SheduleTableViewCell: UITableViewCell {
     }
     func setConstraints() {
         self.selectionStyle = .none
-        
+
         let topStackView = UIStackView(arrangedSubviews: [pillName,timePill], axis: .horizontal, spacing: 10, distribution: .fillEqually)
-        
+
         self.addSubview(pillImageView)
         NSLayoutConstraint.activate([
             pillImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
@@ -70,9 +71,9 @@ class SheduleTableViewCell: UITableViewCell {
             topStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             topStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
-        
+
         let bottomStackView = UIStackView(arrangedSubviews: [countPills, admissionCondition], axis: .horizontal, spacing: 10, distribution: .fillProportionally)
-        
+
         self.addSubview(bottomStackView)
         NSLayoutConstraint.activate([
             bottomStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
@@ -81,4 +82,6 @@ class SheduleTableViewCell: UITableViewCell {
             bottomStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
+    
+
 }

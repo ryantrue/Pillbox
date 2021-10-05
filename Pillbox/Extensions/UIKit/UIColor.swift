@@ -15,7 +15,6 @@ extension UIColor {
         if hexString.hasPrefix("#") {
             hexString.remove(at: hexString.startIndex)
         }
-        
         if hexString.count != 6 {
             return UIColor.black
         }

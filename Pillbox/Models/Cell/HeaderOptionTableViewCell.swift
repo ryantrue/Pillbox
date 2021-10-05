@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class HeaderOptionTableViewCell: UITableViewHeaderFooterView {
+final class HeaderOptionTableViewCell: UITableViewHeaderFooterView {
     
     let headerLabel = UILabel(text: "", font: .proText14())
     
@@ -16,8 +17,8 @@ class HeaderOptionTableViewCell: UITableViewHeaderFooterView {
         
         headerLabel.textColor = .black
         
-        self.contentView.backgroundColor = .lightGray
-        setConstraints()
+        self.contentView.backgroundColor = .white
+        updateViewConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -27,13 +28,13 @@ class HeaderOptionTableViewCell: UITableViewHeaderFooterView {
     func headerConfigure(nameArray: [String], section: Int) {
         headerLabel.text = nameArray[section]
     }
-    func setConstraints() {
+    
+    func updateViewConstraints() {
         self.addSubview(headerLabel)
-        NSLayoutConstraint.activate([
-            headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            headerLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-        ])
-
-        
+        headerLabel.snp.makeConstraints { (make) -> Void in
+            make.left.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview().inset(10)
+        }
     }
+    
 }

@@ -6,10 +6,10 @@
 //
 
 import UIKit
-class ColorTaskTableiewController : UITableViewController {
+final class ColorTaskTableiewController : UITableViewController {
     
     let idTaskColorCell = "idTaskColorCell"
-    let idTaskScheduleHeader = "idTaskScheduleHeader"
+    let idTaskAidKitHeader = "idTaskAidKitHeader"
     
     let headerNameArray = ["RED","BLUE","TEAL","INDIGO","ORANGE", "YELLOW", "GRAY"]
     
@@ -22,7 +22,7 @@ class ColorTaskTableiewController : UITableViewController {
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.register(ColorTableViewCell.self, forCellReuseIdentifier: idTaskColorCell)
-        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idTaskScheduleHeader)
+        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idTaskAidKitHeader)
         
         title = "Color tasks"
     }
@@ -50,7 +50,7 @@ class ColorTaskTableiewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idTaskScheduleHeader) as! HeaderOptionTableViewCell
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idTaskAidKitHeader) as! HeaderOptionTableViewCell
         header.headerConfigure(nameArray: headerNameArray, section: section)
         return header
     }
@@ -60,7 +60,7 @@ class ColorTaskTableiewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
-        case 0: setColor(color: "EB514B")
+        case 0: setColor(color: "ED534D")
         case 1: setColor(color: "3392E5")
         case 2: setColor(color: "129A87")
         case 3: setColor(color: "4E60BB")

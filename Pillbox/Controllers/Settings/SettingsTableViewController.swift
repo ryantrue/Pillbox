@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class SettingsTableViewController : UITableViewController {
+final class SettingsTableViewController : UITableViewController {
     
     let idSettingsCell = "idSettingsCell"
     
@@ -17,9 +17,7 @@ class SettingsTableViewController : UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundColor = .gray
         tableView.separatorStyle = .singleLine
-//        tableView.bounces = false
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: idSettingsCell)
        
         

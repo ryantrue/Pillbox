@@ -9,7 +9,7 @@ import UIKit
 import FSCalendar
 import RealmSwift
 
-class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
+final class JournalViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var calendarHeightConstraint: NSLayoutConstraint!
     
@@ -28,7 +28,7 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
         return tableView
     }()
     
-    let idTasksCell = "idTasksCell"
+    let TaskID = "TaskID"
     
     private let localRealm = try! Realm()
     private var tasksArray: Results<TaskModel>!
@@ -63,7 +63,7 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: idTasksCell)
+        tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskID)
         self.view.addGestureRecognizer(self.scopeGesture)
         self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
         setConstraints()
@@ -80,7 +80,6 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
         if shouldBegin {
-            self.calendar.currentPage = Date()
             let velocity = self.scopeGesture.velocity(in: self.view)
             switch self.calendar.scope {
             case .month:
@@ -117,13 +116,13 @@ class TasksViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 }
 
-extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
+extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tasksArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idTasksCell, for: indexPath) as! TaskTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TaskID, for: indexPath) as! TaskTableViewCell
         cell.cellTaskDelegate = self
         cell.index = indexPath
         let model = tasksArray[indexPath.row]
@@ -146,7 +145,7 @@ extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 //MARK: - PressReadyTaskButtonProtocol
-extension TasksViewController: PressReadyTaskButtonProtocol{
+extension JournalViewController: PressReadyTaskButtonProtocol{
     func readyButtonTapped(indexPath: IndexPath) {
         
         let task = tasksArray[indexPath.row]
@@ -156,7 +155,7 @@ extension TasksViewController: PressReadyTaskButtonProtocol{
 }
 //MARK: - FSCalendarDataSource, FSCalendarDelegate
 
-extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
+extension JournalViewController: FSCalendarDataSource, FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         calendarHeightConstraint.constant = bounds.height
@@ -168,7 +167,7 @@ extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
 }
 
 //MARK: - setConstraints
-extension TasksViewController {
+extension JournalViewController {
     
     func setConstraints() {
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+final class TaskTableViewCell: UITableViewCell {
     
     let taskName = UILabel(text: "Pill Name", font: .proDisplay20())
     let taskDescription = UILabel(text: "Выпить вместе с водой", font: .proText14())

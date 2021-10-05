@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColorTableViewCell: UITableViewCell {
+final class ColorTableViewCell: UITableViewCell {
     
     let backgroundViewCell: UIView = {
         let view = UIView()
@@ -19,7 +19,8 @@ class ColorTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setConstraints()
+        //        setConstraints()
+        updateViewConstraints()
         
         self.selectionStyle = .none
         self.backgroundColor = .clear
@@ -31,34 +32,28 @@ class ColorTableViewCell: UITableViewCell {
     }
     
     func cellConfigure(indexPath: IndexPath) {
-            switch indexPath.section {
-            case 0:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
-            case 1:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("3392E5")
-            case 2:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
-            case 3:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("4E60BB")
-            case 4:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("EC6A36")
-            case 5:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("ECBD23")
-            default:
-                backgroundViewCell.backgroundColor = UIColor().colorFromHex("788C94")
-            }
+        switch indexPath.section {
+        case 0:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
+        case 1:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("3392E5")
+        case 2:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("129A87")
+        case 3:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("4E60BB")
+        case 4:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("EC6A36")
+        case 5:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("ECBD23")
+        default:
+            backgroundViewCell.backgroundColor = UIColor().colorFromHex("788C94")
         }
+    }
     
-    
-    func setConstraints() {
-        
-        self.addSubview(backgroundViewCell)
-        NSLayoutConstraint.activate([
-            backgroundViewCell.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            backgroundViewCell.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:  5),
-            backgroundViewCell.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-            backgroundViewCell.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -1)
-        ])
-       
+    func updateViewConstraints() {
+        contentView.addSubview(backgroundViewCell)
+        backgroundViewCell.snp.makeConstraints { (make) -> Void in
+            make.edges.equalTo(contentView).inset(UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5))
+        }
     }
 }

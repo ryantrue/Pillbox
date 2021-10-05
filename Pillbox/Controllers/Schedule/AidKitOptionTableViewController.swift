@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ScheduleOptionTableViewController : UITableViewController {
+final class AidKitOptionTableViewController : UITableViewController {
     
-    let idOptionsScheduleCell = "idOptionsScheduleCell"
-    let idOptionsScheduleHeader = "idOptionsScheduleHeader"
+    let idOptionsAidKitCell = "idOptionsAidKitCell"
+    let idOptionsAidKitHeader = "idOptionsAidKitHeader"
     
     let headerNameArray = ["Date and time","pill","pill name","colour","period"]
     
@@ -20,7 +20,7 @@ class ScheduleOptionTableViewController : UITableViewController {
                          [""],
                          ["repear every 7 days"]]
     
-    private var scheduleModel = ScheduleModel()
+    private var aidKitModel = AidKitModel()
     
     var hexColorCell = "5DADE2"
     
@@ -30,8 +30,8 @@ class ScheduleOptionTableViewController : UITableViewController {
         tableView.dataSource = self
         
         tableView.separatorStyle = .none
-        tableView.register(OptionsTableViewCell.self, forCellReuseIdentifier: idOptionsScheduleCell)
-        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsScheduleHeader)
+        tableView.register(OptionsTableViewCell.self, forCellReuseIdentifier: idOptionsAidKitCell)
+        tableView.register(HeaderOptionTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsAidKitHeader)
         
         title = "Option shcedule"
         
@@ -40,12 +40,12 @@ class ScheduleOptionTableViewController : UITableViewController {
     
     @objc private func saveButtonTapped() {
         
-        if scheduleModel.scheduleDate == nil || scheduleModel.scheduleTime == nil || scheduleModel.scheduleName == "Unknown" {
+        if aidKitModel.aidKitDate == nil || aidKitModel.aidKitTime == nil || aidKitModel.aidKitName == "Unknown" {
             alertOk(title: "Error", message: "Reuered fileds")
         } else {
-            scheduleModel.scheduleColor = hexColorCell
-            RealmManager.shared.saveSheduleModel(model: scheduleModel)
-            scheduleModel = ScheduleModel()
+            aidKitModel.aidKitColor = hexColorCell
+            RealmManager.shared.saveAidKitModel(model: aidKitModel)
+            aidKitModel = AidKitModel()
             alertOk(title: "Success", message: nil)
             hexColorCell = "5DADE2"
             tableView.reloadData()
@@ -71,8 +71,8 @@ class ScheduleOptionTableViewController : UITableViewController {
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsScheduleCell, for: indexPath) as! OptionsTableViewCell
-        cell.cellScheduleConfigure(nameArray: cellNameArray, indexPath: indexPath, hexColor: hexColorCell)
+        let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsAidKitCell, for: indexPath) as! OptionsTableViewCell
+        cell.cellAidKitConfigure(nameArray: cellNameArray, indexPath: indexPath, hexColor: hexColorCell)
         cell.switchRepeatDelegate = self
         return cell
     }
@@ -81,7 +81,7 @@ class ScheduleOptionTableViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsScheduleHeader) as! HeaderOptionTableViewCell
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsAidKitHeader) as! HeaderOptionTableViewCell
         header.headerConfigure(nameArray: headerNameArray, section: section)
         return header
     }
@@ -94,38 +94,38 @@ class ScheduleOptionTableViewController : UITableViewController {
         switch indexPath {
         case [0,0]:
             alertDate(label: cell.nameCellLAbel) {(numberWeekday, date) in
-                self.scheduleModel.scheduleDate = date
-                self.scheduleModel.scheduleWeekday = numberWeekday
+                self.aidKitModel.aidKitDate = date
+                self.aidKitModel.aidKitWeekday = numberWeekday
             }
         case [0,1]:
             alertTime(label: cell.nameCellLAbel) { (time) in
-                self.scheduleModel.scheduleTime = time
+                self.aidKitModel.aidKitTime = time
             }
         case [1,0]:
             alertForCellName(label: cell.nameCellLAbel, name: "name", placholder: "Enter name pill") {text in
-                self.scheduleModel.scheduleName = text }
+                self.aidKitModel.aidKitName = text }
         case [1,1]:
             alertForCellName(label: cell.nameCellLAbel, name: "Dosage", placholder: "Enter dosage") {text in
-                self.scheduleModel.scheduleDose = text }
+                self.aidKitModel.aidKitDose = text }
         case [1,2]:
             alertForCellName(label: cell.nameCellLAbel, name: "UnitOfMeasurement", placholder: "Enter unit of measurement") {text in
-                self.scheduleModel.scheduleUnitOfMeasurment = text}
+                self.aidKitModel.aidKitUnitOfMeasurment = text}
         case [1,3]:
             alertForCellName(label: cell.nameCellLAbel, name: "mg", placholder: "Enter mg") {text in
-                self.scheduleModel.scheduleDose = text }
+                self.aidKitModel.aidKitDose = text }
             
         case [2,0]:
-            pushController(vc: TeachersViewController())
+            pushController(vc: SettingsViewControoler())
         case [3,0]:
-            pushController(vc: ScheduleColorViewController())
+            pushController(vc: AidKitColorViewController())
         default:
             print("Tap OptionTableView")
         }
     }
 }
 
-extension ScheduleOptionTableViewController: SwitchRepeatProtocol {
+extension AidKitOptionTableViewController: SwitchRepeatProtocol {
     func switchRepeat(value: Bool) {
-        scheduleModel.scheduleRepeat = value
+        aidKitModel.aidKitRepeat = value
     }
 }
