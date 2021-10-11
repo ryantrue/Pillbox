@@ -13,6 +13,7 @@ final class ColorTableViewCell: UITableViewCell {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

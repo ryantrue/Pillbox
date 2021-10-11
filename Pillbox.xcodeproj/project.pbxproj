@@ -45,6 +45,7 @@
 		A39E4BCA270AA64E007E166F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E4BC9270AA64E007E166F /* NotificationService.swift */; };
 		A39E4BCE270AA64E007E166F /* ServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A39E4BC7270AA64E007E166F /* ServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A39E4BD5270BDD6B007E166F /* UICalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E4BD4270BDD6B007E166F /* UICalendar.swift */; };
+		A39E4BD7270BFBCC007E166F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E4BD6270BFBCC007E166F /* UIView.swift */; };
 		A3ADA96427042663005D1201 /* AidKitOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADA96327042663005D1201 /* AidKitOptionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		A39E4BC9270AA64E007E166F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A39E4BCB270AA64E007E166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A39E4BD4270BDD6B007E166F /* UICalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendar.swift; sourceTree = "<group>"; };
+		A39E4BD6270BFBCC007E166F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A3ADA96327042663005D1201 /* AidKitOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitOptionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 				A350CA782705AB92009BC719 /* UIColor.swift */,
 				A32D1FAB27080B2F00D185F9 /* UICell.swift */,
 				A39E4BD4270BDD6B007E166F /* UICalendar.swift */,
+				A39E4BD6270BFBCC007E166F /* UIView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39E4BD7270BFBCC007E166F /* UIView.swift in Sources */,
 				A324C392270500490021C831 /* AlertDate.swift in Sources */,
 				A350CA792705AB92009BC719 /* UIColor.swift in Sources */,
 				A33B646226FD02540074656B /* MainTabBarController.swift in Sources */,

@@ -12,12 +12,12 @@ final class AidKitTableViewCell: UITableViewCell {
     
     let pillImageView: UIImageView = {
         let pillImageView = UIImageView()
+        pillImageView.translatesAutoresizingMaskIntoConstraints = false
         pillImageView.image = UIImage(systemName: "pills.fill")?.withRenderingMode(.alwaysTemplate)
         pillImageView.tintColor = .systemBlue
         pillImageView.contentMode = .scaleAspectFill
         pillImageView.clipsToBounds = true
         pillImageView.backgroundColor = .black
-        pillImageView.translatesAutoresizingMaskIntoConstraints = false
         return pillImageView
     }()
     

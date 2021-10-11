@@ -94,7 +94,8 @@ final class AidKitViewController: UIViewController, UIGestureRecognizerDelegate 
         //        setConstraints()
         aidKitOnDay(date: Date())
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtomTapped))
-        //        navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(addButtomTapped))
+                navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
         
     }
     
@@ -157,11 +158,13 @@ extension AidKitViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: aidKitID, for: indexPath) as! AidKitTableViewCell
         let model = aidKitArray[indexPath.row]
         cell.configure(model: model)
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
