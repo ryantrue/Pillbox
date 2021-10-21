@@ -11,6 +11,6 @@ final class SettingsViewControoler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Settings"
+        title = "Pill Name"
     }
 }

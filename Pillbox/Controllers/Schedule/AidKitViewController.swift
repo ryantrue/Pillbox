@@ -9,6 +9,7 @@ import UIKit
 import FSCalendar
 import RealmSwift
 import SnapKit
+import SwiftUI
 
 final class AidKitViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -164,7 +165,7 @@ extension AidKitViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 80
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -215,6 +216,7 @@ extension AidKitViewController {
                 tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
             ])
         }
+    
     
 //    override func updateViewConstraints() {
 //        view.addSubview(calendar)
