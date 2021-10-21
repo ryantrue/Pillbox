@@ -28,6 +28,15 @@
 		A33B646A26FD02560074656B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B646826FD02560074656B /* LaunchScreen.storyboard */; };
 		A33B647526FD08CC0074656B /* AidKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647426FD08CC0074656B /* AidKitViewController.swift */; };
 		A33B647726FD08E70074656B /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B647626FD08E60074656B /* JournalViewController.swift */; };
+		A33C451F2719B71C00619D9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C451E2719B71C00619D9B /* ContentView.swift */; };
+		A33C45232719B7B200619D9B /* Calendar+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C45222719B7B200619D9B /* Calendar+Week.swift */; };
+		A33C45262719B7CF00619D9B /* CalendarColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C45252719B7CF00619D9B /* CalendarColors.swift */; };
+		A33C452D2719B7E500619D9B /* CalendarWeekdaysRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C45282719B7E500619D9B /* CalendarWeekdaysRow.swift */; };
+		A33C452E2719B7E500619D9B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C45292719B7E500619D9B /* CalendarView.swift */; };
+		A33C452F2719B7E500619D9B /* CalendarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C452A2719B7E500619D9B /* CalendarButton.swift */; };
+		A33C45302719B7E500619D9B /* CalendarTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C452B2719B7E500619D9B /* CalendarTitleRow.swift */; };
+		A33C45312719B7E500619D9B /* CalendarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C452C2719B7E500619D9B /* CalendarRow.swift */; };
+		A33C45332719C1D800619D9B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C45322719C1D800619D9B /* SwiftUIView.swift */; };
 		A342D01A26FD2FB500BF5B4E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A342D01926FD2FB500BF5B4E /* FSCalendar */; };
 		A342D02326FD721200BF5B4E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A342D02226FD721200BF5B4E /* UIStackView.swift */; };
 		A343DE5127058A6500DCD869 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343DE5027058A6500DCD869 /* SettingsTableViewCell.swift */; };
@@ -97,6 +106,15 @@
 		A33B646B26FD02560074656B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33B647426FD08CC0074656B /* AidKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitViewController.swift; sourceTree = "<group>"; };
 		A33B647626FD08E60074656B /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		A33C451E2719B71C00619D9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A33C45222719B7B200619D9B /* Calendar+Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+Week.swift"; sourceTree = "<group>"; };
+		A33C45252719B7CF00619D9B /* CalendarColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarColors.swift; sourceTree = "<group>"; };
+		A33C45282719B7E500619D9B /* CalendarWeekdaysRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekdaysRow.swift; sourceTree = "<group>"; };
+		A33C45292719B7E500619D9B /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		A33C452A2719B7E500619D9B /* CalendarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarButton.swift; sourceTree = "<group>"; };
+		A33C452B2719B7E500619D9B /* CalendarTitleRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTitleRow.swift; sourceTree = "<group>"; };
+		A33C452C2719B7E500619D9B /* CalendarRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarRow.swift; sourceTree = "<group>"; };
+		A33C45322719C1D800619D9B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A342D02226FD721200BF5B4E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		A343DE5027058A6500DCD869 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		A350CA7327059500009BC719 /* AidKitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidKitModel.swift; sourceTree = "<group>"; };
@@ -169,6 +187,7 @@
 		A33B645C26FD02540074656B /* Pillbox */ = {
 			isa = PBXGroup;
 			children = (
+				A33C451B2719B6E300619D9B /* Sources */,
 				A33B647126FD046A0074656B /* Apllication */,
 				A33B647226FD048E0074656B /* Controllers */,
 				A342D02026FD71EA00BF5B4E /* Extensions */,
@@ -208,6 +227,54 @@
 				A33B646B26FD02560074656B /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A33C451B2719B6E300619D9B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A33C45202719B78D00619D9B /* CalendarUI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A33C45202719B78D00619D9B /* CalendarUI */ = {
+			isa = PBXGroup;
+			children = (
+				A33C451E2719B71C00619D9B /* ContentView.swift */,
+				A33C45322719C1D800619D9B /* SwiftUIView.swift */,
+				A33C45272719B7DA00619D9B /* View */,
+				A33C45242719B7C600619D9B /* Model */,
+				A33C45212719B7A600619D9B /* ExtensionUI */,
+			);
+			path = CalendarUI;
+			sourceTree = "<group>";
+		};
+		A33C45212719B7A600619D9B /* ExtensionUI */ = {
+			isa = PBXGroup;
+			children = (
+				A33C45222719B7B200619D9B /* Calendar+Week.swift */,
+			);
+			path = ExtensionUI;
+			sourceTree = "<group>";
+		};
+		A33C45242719B7C600619D9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A33C45252719B7CF00619D9B /* CalendarColors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A33C45272719B7DA00619D9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A33C452A2719B7E500619D9B /* CalendarButton.swift */,
+				A33C452C2719B7E500619D9B /* CalendarRow.swift */,
+				A33C452B2719B7E500619D9B /* CalendarTitleRow.swift */,
+				A33C45292719B7E500619D9B /* CalendarView.swift */,
+				A33C45282719B7E500619D9B /* CalendarWeekdaysRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A342D01B26FD62F000BF5B4E /* Models */ = {
@@ -488,26 +555,35 @@
 				A39E4BD7270BFBCC007E166F /* UIView.swift in Sources */,
 				A324C392270500490021C831 /* AlertDate.swift in Sources */,
 				A350CA792705AB92009BC719 /* UIColor.swift in Sources */,
+				A33C452D2719B7E500619D9B /* CalendarWeekdaysRow.swift in Sources */,
 				A33B646226FD02540074656B /* MainTabBarController.swift in Sources */,
 				A33B645E26FD02540074656B /* AppDelegate.swift in Sources */,
 				A35EA61227040AF1003B2536 /* TaskTableViewCell.swift in Sources */,
 				A391E81A2703D1550046B740 /* AidKitTableViewCell.swift in Sources */,
 				A39E4BD5270BDD6B007E166F /* UICalendar.swift in Sources */,
+				A33C452E2719B7E500619D9B /* CalendarView.swift in Sources */,
 				A316EAEA2705897400B3EAB1 /* ColorTableViewCell.swift in Sources */,
 				A316EAE02705875300B3EAB1 /* TaskOptionTabbleViewController.swift in Sources */,
 				A324C39627052F7D0021C831 /* AlertForCellName.swift in Sources */,
 				A391E81C2703E19E0046B740 /* UILabel.swift in Sources */,
 				A342D02326FD721200BF5B4E /* UIStackView.swift in Sources */,
+				A33C45302719B7E500619D9B /* CalendarTitleRow.swift in Sources */,
+				A33C45232719B7B200619D9B /* Calendar+Week.swift in Sources */,
+				A33C45332719C1D800619D9B /* SwiftUIView.swift in Sources */,
 				A32D1FAA2707C07400D185F9 /* TaskModel.swift in Sources */,
 				A324C39427052D610021C831 /* AlertTime.swift in Sources */,
 				A33B646026FD02540074656B /* SceneDelegate.swift in Sources */,
 				A316EADB2705858000B3EAB1 /* SettingsViewControoler.swift in Sources */,
 				A350CA77270599DA009BC719 /* RealmManager.swift in Sources */,
+				A33C45262719B7CF00619D9B /* CalendarColors.swift in Sources */,
 				A350CA7B2705B342009BC719 /* AlertOk.swift in Sources */,
+				A33C452F2719B7E500619D9B /* CalendarButton.swift in Sources */,
 				A33B647726FD08E70074656B /* JournalViewController.swift in Sources */,
 				A391E81E2703E96B0046B740 /* UIFont.swift in Sources */,
 				A350CA7427059500009BC719 /* AidKitModel.swift in Sources */,
 				A33B647526FD08CC0074656B /* AidKitViewController.swift in Sources */,
+				A33C451F2719B71C00619D9B /* ContentView.swift in Sources */,
+				A33C45312719B7E500619D9B /* CalendarRow.swift in Sources */,
 				A343DE5127058A6500DCD869 /* SettingsTableViewCell.swift in Sources */,
 				A32D1FAC27080B2F00D185F9 /* UICell.swift in Sources */,
 				A316EAE12705875300B3EAB1 /* ColorTaskTableiewController.swift in Sources */,
